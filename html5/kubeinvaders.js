@@ -234,10 +234,14 @@ function drawAlien(alienX, alienY, name) {
     var image = new Image(); // Image constructor
     if (contains(nodes, name)) {
         image.src = './k8s_node.png';
+        ctx.font = "10px Arial";
+        ctx.fillText(name, alienX, alienY);
         ctx.drawImage(image, alienX, alienY, 30, 40);
     }
     else {
         image.src = './sprite_invader.png';
+        ctx.font = "10px Arial";
+        ctx.fillText(name, alienX, alienY);
         ctx.drawImage(image, alienX, alienY, 40, 40);
     }
     
